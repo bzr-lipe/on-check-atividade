@@ -1,6 +1,6 @@
 :root {
     --acerto: #29f4d5;
-    --rosa-fiap: #E91C5D
+    --rosa-fiap: #E91C5D;
 }
 
 .botoes {
@@ -10,45 +10,61 @@
     transition: 0.3s;
 }
 
-.btn-check-individual {
-    width: 100px;
-    display: flex ;
-    align-items: center;
-    justify-content:center ;
-    border: 1px solid #E91C5D;
-    font-size: 10px;
-    padding: 5px 5px;
-    color: #E91C5D;
-    text-transform: uppercase;
-    transition: 0.3s;
 
+.btn-check-individual  {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    transition: 1s;
 }
 
 
 
-
-#btn-verdadeiro:hover, .verdadeiro{
-    border: none;
-    background-color: #22c4ab!important;
+.texto-btn {
+    margin-left: 40px;
+    position: absolute;
+    text-transform: uppercase;
+    cursor: pointer;
+    visibility: hidden!important;
     color: #FFFFFF;
     font-weight: bold;
 }
 
-#btn-falso:hover, .falso{
-    border: none!important;
+.btn-check-individual:hover > .texto-btn {
+    visibility: visible!important;
+}
+
+#btn-verdadeiro {
+    overflow-x: hidden;
+}
+
+
+#btn-verdadeiro:hover, .verdadeiro {
+    width: 200px;
+}
+
+.icon {
+    position: absolute!important;
+    width: 30px;
+    height: 30px;
+}
+
+#btn-verdadeiro{
+    overflow: hidden!important;
+    background-color: aqua;
+
+}
+
+#btn-falso{
     background-color: #E91C5D!important;
-    color: #FFFFFF!important;
 }
 
-.errado{
-    pointer-events: none;
-    cursor: default!important;
-    background-color: #a8a8a8!important;
-    border: 1px solid #a8a8a8!important;
-    color: #FFFFFF!important;
-    font-weight: bold!important;
+#btn-falso:hover, .falso {
+    width: 150px;
 }
-
 
 @media only screen and (max-width: 768px) {
     .btn-check-individual{
