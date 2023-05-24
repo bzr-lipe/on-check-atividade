@@ -1,12 +1,26 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
+import { TweenMax } from 'gsap'
+
+/**
+* @name OnVerdadeiroFalso
+* @description
+* Este componente cria a interação para verdadeiro ou falso
+*
+* @usage
+* ```html
+*
+* <on-verdadeiro-falso isTruth: true></on-verdadeiro-falso>
+* ```
+*/
+
 
 @Component({
-  selector: 'on-check-atividade',
+  selector: 'on-verdadeiro-falso',
   templateUrl: './on-check-atividade.html',
   styleUrls:['./on-check-atividade.css']
 })
 
-export class onCheckAtividade implements OnInit {
+export class OnVerdadeiroFalsoComponent implements OnInit {
   @Input() isTruth: string;
   botoes = document.getElementsByTagName('on-check-atividade');
   classes = ['btn-check-individual'];
@@ -18,17 +32,22 @@ export class onCheckAtividade implements OnInit {
     const verdadeira = this.isTruth;
     const click = e.target as HTMLElement;
     const BotoesFila = click.parentNode as HTMLElement;
-    const btnVerdadeiro = BotoesFila.firstElementChild
-    const btnFalso = BotoesFila.lastElementChild
-
-
-    if (verdadeira == "true") {
-        btnVerdadeiro.classList.add('verdadeiro');
-        btnFalso.classList.add('errado')
+    console.log(BotoesFila)
+    
+    if (verdadeira == 'true'){
+      console.log('okok')
+      
+      TweenMax.to(BotoesFila.lastElementChild, 0.5, {opacity: 0})
+      TweenMax.to(BotoesFila.firstElementChild, 0.5, {width: '200px'})
     } else {
-      btnFalso.classList.add('falso');
-      btnVerdadeiro.classList.add('errado');
+      TweenMax.to(BotoesFila.firstElementChild, 0.5, {opacity: 0, width: '0px'})
+      TweenMax.to(BotoesFila.lastElementChild, 0.5, {width: '140px'})
+      TweenMax.to(BotoesFila.firstElementChild, 4, { position: 'absolute'})
+
     }
+
+
+
   }
 
   
