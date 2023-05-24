@@ -1,9 +1,5 @@
 :root {
-<<<<<<< HEAD
     --acerto: #51dd00;
-=======
-    --acerto: #29f4d5;
->>>>>>> 349a52fa4bc9df9adca8d4f78c77fc630c178b49
     --rosa-fiap: #E91C5D;
 }
 
@@ -22,28 +18,17 @@
     border-radius: 50px;
     width: 50px;
     height: 50px;
-<<<<<<< HEAD
     transition: 0.5s;
     cursor: pointer;
-=======
-    transition: 1s;
->>>>>>> 349a52fa4bc9df9adca8d4f78c77fc630c178b49
 }
 
 
 
 .texto-btn {
     margin-left: 40px;
-<<<<<<< HEAD
     white-space: nowrap;
     text-transform: uppercase;
     cursor: pointer;
-=======
-    position: absolute;
-    text-transform: uppercase;
-    cursor: pointer;
-    visibility: hidden!important;
->>>>>>> 349a52fa4bc9df9adca8d4f78c77fc630c178b49
     color: #FFFFFF;
     font-weight: bold;
     pointer-events: none;   
@@ -51,7 +36,6 @@
 
 .btn-check-individual:hover > .texto-btn {
     visibility: visible!important;
-<<<<<<< HEAD
 }
 
 #btn-verdadeiro {
@@ -84,39 +68,6 @@
     width: 150px;
 }
 
-=======
-}
-
-#btn-verdadeiro {
-    overflow-x: hidden;
-}
-
-
-#btn-verdadeiro:hover, .verdadeiro {
-    width: 200px;
-}
-
-.icon {
-    position: absolute!important;
-    width: 30px;
-    height: 30px;
-}
-
-#btn-verdadeiro{
-    overflow: hidden!important;
-    background-color: aqua;
-
-}
-
-#btn-falso{
-    background-color: #E91C5D!important;
-}
-
-#btn-falso:hover, .falso {
-    width: 150px;
-}
-
->>>>>>> 349a52fa4bc9df9adca8d4f78c77fc630c178b49
 @media only screen and (max-width: 768px) {
     .btn-check-individual{
         width: 100%;

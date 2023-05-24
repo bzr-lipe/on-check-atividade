@@ -9,11 +9,7 @@ import { TweenMax } from 'gsap'
 * @usage
 * ```html
 *
-<<<<<<< HEAD
 * <on-verdadeiro-falso isTruth: true></on-verdadeiro-falso>
-=======
-* <on-verdadeiro-falso isTruth: true(Caso seja verdadeira, false caso falsa)></on-verdadeiro-falso>
->>>>>>> 349a52fa4bc9df9adca8d4f78c77fc630c178b49
 * ```
 */
 
@@ -36,7 +32,6 @@ export class OnVerdadeiroFalsoComponent implements OnInit {
     const verdadeira = this.isTruth;
     const click = e.target as HTMLElement;
     const BotoesFila = click.parentNode as HTMLElement;
-<<<<<<< HEAD
     console.log(BotoesFila)
     
     if (verdadeira == 'true'){
@@ -51,13 +46,6 @@ export class OnVerdadeiroFalsoComponent implements OnInit {
 
     }
 
-=======
-    const btnVerdadeiro = BotoesFila.firstChild.parentElement.parentElement;
-    const btnFalso = BotoesFila.lastChild.parentElement.parentElement;
-
-    console.log(BotoesFila.lastChild.parentElement)
-    
->>>>>>> 349a52fa4bc9df9adca8d4f78c77fc630c178b49
 
 
   }
